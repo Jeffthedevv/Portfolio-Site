@@ -1,28 +1,46 @@
 import Head from 'next/head'
-import MainHeader from '../components/header/MainHeader';
-// import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
+import { Row, Col, Button } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Home() {
+
+export default function Home( {...pageProps} ) {
+
+
+
   return (
-    <div className>
+    <>
       <Head>
-        <title>Welcome</title>
-        <meta name="description" content="A Portfolio website for Jeffery Diaz" />
-        <link rel="icon" href="/favicon.ico" />
+          <title>Welcome</title>
+          <meta name="description" content="A Portfolio website for Jeffery Diaz" />
+          <link rel="icon" href="/favicon.ico" />
       </Head>
-    
-      <header>
-        <MainHeader />
-      </header>
 
-      <main className>
-        <p>Body</p>
-      </main>
+      <Row className="pt-4">
+          <Col sm={{ order:'first'}} md={{ offset: 1, span: 2}} className="p-0 flex justify-content-between">
+            <Row>
+              <Button variant="primary">Introduction</Button>
+            </Row>
+            <Row>
+              <Button variant="primary">Bio</Button>
+            </Row>
+            <Row>
+              <Button variant="primary">Skills</Button>
+            </Row>
+            <Row>
+              <Button variant="primary">Lab</Button>
+            </Row>
+            <Row>
+              <Button variant="primary">Network</Button>
+            </Row>
+          </Col>
 
-      <footer className>
-        <p>Footer</p>
-      </footer>
-    </div>
+
+          <Col sm={12} md={9}>
+
+          </Col>
+
+      </Row>
+
+    </>
   )
 }
