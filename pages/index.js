@@ -19,7 +19,7 @@ export default class Home extends React.Component {
     this.setState({ page:'' })
   }
   
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setState({ page: 'intro' })
   }
 
