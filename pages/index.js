@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head'
 import { Row, Col, Button, Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import Intro from '../components/intro/intro'
 import Bio from '../components/bio/bio'
@@ -9,6 +9,8 @@ import Lab from '../components/lab/lab'
 import Skills from '../components/skills/skills'
 import Network from '../components/network/network'
 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import index from '../styles/index.module.css'
 
 export default class Home extends React.Component {
@@ -100,36 +102,33 @@ export default class Home extends React.Component {
               className={index.nav_wrapper}
               xs={12} 
             >
-              <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand href="#home">{this.state.page}</Navbar.Brand>
+              <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" id={index.bs_nav}>
+                <Navbar.Brand>{this.state.page}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Button 
-                className={`${index.nav_button} active`}
-                variant="primary"
-                value="intro"    
-                aria-pressed="true"              
-                onClick={this.buttonHandler}
+                    className={`${index.nav_button} active`}
+                    variant="primary"
+                    value="intro"    
+                    Toggle={true}
+                    onClick={this.buttonHandler}
                   >Introduction</Button>
                   <Button 
                     className={index.nav_button}
                     variant="primary"
                     value="bio"
-                    aria-pressed="true"
                     onClick={this.buttonHandler}
                   >Bio</Button>
                   <Button 
                     className={index.nav_button}
                     variant="primary"
                     value="skills"
-                    aria-pressed="false"
                     onClick={this.buttonHandler}
                   >Skills</Button>
                   <Button 
                     className={index.nav_button}
                     variant="primary"
                     value="lab"
-                    aria-pressed="false"
                     onClick={this.buttonHandler}
                   >Lab</Button>
                   <Button             

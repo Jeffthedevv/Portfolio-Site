@@ -1,3 +1,6 @@
+.navbar {
+  justify-content: end !important;
+}
 .nav_wrapper {
   background-color: #000;
 }
@@ -22,6 +25,10 @@
   height: max-content;
   background-color: #000;
 }
+#bs_nav{
+  justify-content: end !important;
+}
+
 @media(min-width:768px) {
   #sm_nav_wrapper {
     display: none;
