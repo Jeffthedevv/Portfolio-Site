@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Row, Col, Button, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Intro from '../components/intro/intro'
@@ -28,8 +28,7 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const pageHandler = () => {
-      console.log("state: ", this.state)
+    const pageHandler = () => {      
       switch(this.state.page)
       {
         case "intro":
@@ -55,39 +54,94 @@ export default class Home extends React.Component {
         </Head>
 
         <Row className={`${index.wrapper} main-wrapper`}>
-            <Col xs={{ order: 'first'}} sm={{ span: 12 }} md={{ span: 2 }} className={index.nav_wrapper}>
-                <Button 
-                  className={index.nav_button}
-                  variant="primary"
-                  value="intro"
-                  onClick={this.buttonHandler}
-                >Introduction</Button>
-                <Button 
-                  className={index.nav_button}
-                  variant="primary"
-                  value="bio"
-                  onClick={this.buttonHandler}
-                >Bio</Button>
-                <Button 
-                  className={index.nav_button}
-                  variant="primary"
-                  value="skills"
-                  onClick={this.buttonHandler}
-                >Skills</Button>
-                <Button 
-                  className={index.nav_button}
-                  variant="primary"
-                  value="lab"
-                  onClick={this.buttonHandler}
-                >Lab</Button>
-                <Button 
-                  className={index.nav_button}
-                  variant="primary"
-                  value="network"
-                  onClick={this.buttonHandler}
-                >Network</Button>
+            <Col 
+              id={index.lg_nav_wrapper}
+              className={index.nav_wrapper}
+              md={{ span: 2 }} 
+            >
+              <Button 
+                className={`${index.nav_button} active`}
+                variant="primary"
+                value="intro"    
+                aria-pressed="true"              
+                onClick={this.buttonHandler}
+              >Introduction</Button>
+              <Button 
+                className={index.nav_button}
+                variant="primary"
+                value="bio"
+                aria-pressed="true"
+                onClick={this.buttonHandler}
+              >Bio</Button>
+              <Button 
+                className={index.nav_button}
+                variant="primary"
+                value="skills"
+                aria-pressed="false"
+                onClick={this.buttonHandler}
+              >Skills</Button>
+              <Button 
+                className={index.nav_button}
+                variant="primary"
+                value="lab"
+                aria-pressed="false"
+                onClick={this.buttonHandler}
+              >Lab</Button>
+              <Button             
+                className={index.nav_button}
+                variant="primary"
+                value="network"
+                onClick={this.buttonHandler}
+              >Network</Button>
             </Col>
 
+            <Col 
+              id={index.sm_nav_wrapper}
+              className={index.nav_wrapper}
+              xs={12} 
+            >
+              <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar.Brand href="#home">{this.state.page}</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                  <Button 
+                className={`${index.nav_button} active`}
+                variant="primary"
+                value="intro"    
+                aria-pressed="true"              
+                onClick={this.buttonHandler}
+                  >Introduction</Button>
+                  <Button 
+                    className={index.nav_button}
+                    variant="primary"
+                    value="bio"
+                    aria-pressed="true"
+                    onClick={this.buttonHandler}
+                  >Bio</Button>
+                  <Button 
+                    className={index.nav_button}
+                    variant="primary"
+                    value="skills"
+                    aria-pressed="false"
+                    onClick={this.buttonHandler}
+                  >Skills</Button>
+                  <Button 
+                    className={index.nav_button}
+                    variant="primary"
+                    value="lab"
+                    aria-pressed="false"
+                    onClick={this.buttonHandler}
+                  >Lab</Button>
+                  <Button             
+                    className={index.nav_button}
+                    variant="primary"
+                    value="network"
+                    onClick={this.buttonHandler}
+                  >Network</Button>
+                </Navbar.Collapse>
+              </Navbar>
+            </Col>
+      
             <Col sm={12} md={10} className={index.content_wrapper}>
               {pageHandler()}
             </Col>
