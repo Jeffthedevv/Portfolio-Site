@@ -3,12 +3,13 @@ import Head from 'next/head'
 import { Row, Col, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Intro from '../components/intro'
-import Bio from '../components/bio'
-import Lab from '../components/lab'
-import Skills from '../components/skills'
-import Network from '../components/network'
+import Intro from '../components/intro/intro'
+import Bio from '../components/bio/bio'
+import Lab from '../components/lab/lab'
+import Skills from '../components/skills/skills'
+import Network from '../components/network/network'
 
+import index from '../styles/index.module.css'
 
 export default class Home extends React.Component {
   constructor(props){
@@ -52,46 +53,42 @@ export default class Home extends React.Component {
             <meta name="description" content="A Portfolio website for Jeffery Diaz" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Row className="pt-4">
-            <Col sm={{ order:'first'}} md={{ offset: 1, span: 2}} className="p-0 flex justify-content-between">
-              <Row>
+
+        <Row className={`${index.wrapper} main-wrapper`}>
+            <Col xs={{ order: 'first'}} sm={{ span: 12 }} md={{ span: 2 }} className={index.nav_wrapper}>
                 <Button 
+                  className={index.nav_button}
                   variant="primary"
                   value="intro"
                   onClick={this.buttonHandler}
                 >Introduction</Button>
-              </Row>
-              <Row>
                 <Button 
+                  className={index.nav_button}
                   variant="primary"
                   value="bio"
                   onClick={this.buttonHandler}
                 >Bio</Button>
-              </Row>
-              <Row>
                 <Button 
+                  className={index.nav_button}
                   variant="primary"
                   value="skills"
                   onClick={this.buttonHandler}
                 >Skills</Button>
-              </Row>
-              <Row>
                 <Button 
+                  className={index.nav_button}
                   variant="primary"
                   value="lab"
                   onClick={this.buttonHandler}
                 >Lab</Button>
-              </Row>
-              <Row>
                 <Button 
+                  className={index.nav_button}
                   variant="primary"
                   value="network"
                   onClick={this.buttonHandler}
                 >Network</Button>
-              </Row>
             </Col>
 
-            <Col sm={12} md={9}>
+            <Col sm={12} md={10} className={index.content_wrapper}>
               {pageHandler()}
             </Col>
         </Row>
