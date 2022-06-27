@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head'
-import { Row, Col, Button, Navbar, Nav, NavDropdown } from 'react-bootstrap'
-
 
 import Intro from '../components/intro/intro'
 import Bio from '../components/bio/bio'
@@ -9,7 +7,7 @@ import Lab from '../components/lab/lab'
 import Skills from '../components/skills/skills'
 import Network from '../components/network/network'
 
-
+import { Row, Col, Button, Navbar, Nav, Collapse } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import index from '../styles/index.module.css'
 
@@ -17,10 +15,11 @@ export default class Home extends React.Component {
   constructor(props){
     super(props)
     this.setState({ page:'' })
+    
   }
-  
+
   UNSAFE_componentWillMount() {
-    this.setState({ page: 'intro' })
+    this.setState({ page: 'Welcome' })
   }
 
   buttonHandler = (event) => {    
@@ -30,22 +29,21 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const pageHandler = () => {      
+    const pageHandler = () => {
       switch(this.state.page)
       {
-        case "intro":
+        case "Welcome":
           return <Intro />
-        case "bio":
+        case "Bio":
           return <Bio/>
-        case "lab":
+        case "Lab":
           return <Lab/>
-        case "skills":
+        case "Skills":
           return <Skills/>
-        case "network":
+        case "Network":
           return <Network/>
       }
     }
-
 
     return (
       <div>
@@ -56,87 +54,32 @@ export default class Home extends React.Component {
         </Head>
 
         <Row className={`${index.wrapper} main-wrapper`}>
-            <Col 
-              id={index.lg_nav_wrapper}
-              className={index.nav_wrapper}
-              md={{ span: 2 }} 
-            >
-              <Button 
-                className={`${index.nav_button} active`}
-                variant="primary"
-                value="intro"    
-                aria-pressed="true"              
-                onClick={this.buttonHandler}
-              >Introduction</Button>
-              <Button 
-                className={index.nav_button}
-                variant="primary"
-                value="bio"
-                aria-pressed="true"
-                onClick={this.buttonHandler}
-              >Bio</Button>
-              <Button 
-                className={index.nav_button}
-                variant="primary"
-                value="skills"
-                aria-pressed="false"
-                onClick={this.buttonHandler}
-              >Skills</Button>
-              <Button 
-                className={index.nav_button}
-                variant="primary"
-                value="lab"
-                aria-pressed="false"
-                onClick={this.buttonHandler}
-              >Lab</Button>
-              <Button             
-                className={index.nav_button}
-                variant="primary"
-                value="network"
-                onClick={this.buttonHandler}
-              >Network</Button>
-            </Col>
-
-            <Col 
-              id={index.sm_nav_wrapper}
-              className={index.nav_wrapper}
+            <Col id={index.sm_nav_wrapper} className={index.nav_wrapper}
               xs={12} 
+              md={2}
             >
-              <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" id={index.bs_nav}>
+            
+              <Navbar collapseOnSelect expand="md"  id={index.bs_nav}>
                 <Navbar.Brand>{this.state.page}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                  <Button 
-                    className={`${index.nav_button} active`}
-                    variant="primary"
-                    value="intro"    
-                    Toggle={true}
-                    onClick={this.buttonHandler}
-                  >Introduction</Button>
-                  <Button 
-                    className={index.nav_button}
-                    variant="primary"
-                    value="bio"
-                    onClick={this.buttonHandler}
-                  >Bio</Button>
-                  <Button 
-                    className={index.nav_button}
-                    variant="primary"
-                    value="skills"
-                    onClick={this.buttonHandler}
-                  >Skills</Button>
-                  <Button 
-                    className={index.nav_button}
-                    variant="primary"
-                    value="lab"
-                    onClick={this.buttonHandler}
-                  >Lab</Button>
-                  <Button             
-                    className={index.nav_button}
-                    variant="primary"
-                    value="network"
-                    onClick={this.buttonHandler}
-                  >Network</Button>
+                  <Nav className="inner-nav">
+                    <Nav.Link href='#'>
+                      <Button className={`${index.nav_button} active`} value="Welcome" onClick={this.buttonHandler}>Welcome</Button>  
+                    </Nav.Link>
+                    <Nav.Link href='#'>
+                      <Button className={index.nav_button} value="Bio" onClick={this.buttonHandler}>Bio</Button>  
+                    </Nav.Link>
+                    <Nav.Link href='#'>
+                    <Button className={index.nav_button} value="Skills" onClick={this.buttonHandler}>Skills</Button>  
+                    </Nav.Link>
+                    <Nav.Link href='#'>
+                      <Button className={index.nav_button} value="Lab" onClick={this.buttonHandler}>Lab</Button>
+                    </Nav.Link>
+                    <Nav.Link href='#'>
+                      <Button className={index.nav_button} value="Network" onClick={this.buttonHandler}>Network</Button>
+                    </Nav.Link>
+                  </Nav>
                 </Navbar.Collapse>
               </Navbar>
             </Col>
