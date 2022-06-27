@@ -54,39 +54,34 @@ export default class Home extends React.Component {
         </Head>
 
         <Row className={`${index.wrapper} main-wrapper`}>
-            <Col id={index.sm_nav_wrapper} className={index.nav_wrapper}
-              xs={12} 
-              md={2}
-            >
-            
-              <Navbar collapseOnSelect expand="md"  id={index.bs_nav}>
-                <Navbar.Brand>{this.state.page}</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className="inner-nav">
-                    <Nav.Link href='#'>
-                      <Button className={`${index.nav_button} active`} value="Welcome" onClick={this.buttonHandler}>Welcome</Button>  
-                    </Nav.Link>
-                    <Nav.Link href='#'>
-                      <Button className={index.nav_button} value="Bio" onClick={this.buttonHandler}>Bio</Button>  
-                    </Nav.Link>
-                    <Nav.Link href='#'>
+          <Col id={index.sm_nav_wrapper} className={index.nav_wrapper} xs={12} md={2}>
+            <Navbar collapseOnSelect expand="md"  id={index.bs_nav}>
+              <Navbar.Brand>{this.state.page}</Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="inner-nav">
+                  <Nav.Link href='#'>
+                    <Button className={`${index.nav_button} active`} value="Welcome" onClick={this.buttonHandler}>Welcome</Button>  
+                  </Nav.Link>
+                  <Nav.Link href='#'>
+                    <Button className={index.nav_button} value="Bio" onClick={this.buttonHandler}>Bio</Button>  
+                  </Nav.Link>
+                  <Nav.Link href='#'>
                     <Button className={index.nav_button} value="Skills" onClick={this.buttonHandler}>Skills</Button>  
-                    </Nav.Link>
-                    <Nav.Link href='#'>
-                      <Button className={index.nav_button} value="Lab" onClick={this.buttonHandler}>Lab</Button>
-                    </Nav.Link>
-                    <Nav.Link href='#'>
-                      <Button className={index.nav_button} value="Network" onClick={this.buttonHandler}>Network</Button>
-                    </Nav.Link>
-                  </Nav>
-                </Navbar.Collapse>
-              </Navbar>
-            </Col>
-      
-            <Col sm={12} md={10} className={index.content_wrapper}>
-              {pageHandler()}
-            </Col>
+                  </Nav.Link>
+                  <Nav.Link href='#'>
+                    <Button className={index.nav_button} value="Lab" onClick={this.buttonHandler}>Lab</Button>
+                  </Nav.Link>
+                  <Nav.Link href='#'>
+                    <Button className={index.nav_button} value="Network" onClick={this.buttonHandler}>Network</Button>
+                  </Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
+          </Col>
+          <Col sm={12} md={10} className={index.content_wrapper}>
+            {pageHandler()}
+          </Col>
         </Row>
       </div>   
     )
