@@ -15,9 +15,35 @@ a {
   box-sizing: border-box;
 }
 
+.navbar-brand {
+  color: #fff;
+}
+.navbar-toggler {
+  border-color: #fff;
+}
+.navbar-nav .btn {
+  background-color: #000;
+  border-radius: 0px;
+  border-color: #fff;
+  border-width: 0px;
+}
+.navbar-nav .btn.active {
+  background-color: #000;
+  border-bottom-width: 1px;
+  border-color: #fff;
+}
+.navbar-nav .btn:hover {
+  background-color: #000;
+  border-bottom-width: 1px;
+}
+
+
 @media(max-width: 768px) {
   .navbar {
     padding: 8px 20px 8px 20px;
+  }
+  .navbar-nav {
+    padding: 0px 25% 0px 25%;
   }
 }
 
