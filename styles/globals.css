@@ -30,6 +30,7 @@ a {
     justify-content: space-evenly !important;
     align-items: stretch;
   }
+  
   .navbar-expand-md .navbar-collapse {
     height: inherit;
   }
@@ -37,5 +38,7 @@ a {
     margin-right: 0px !important;
     flex-direction: column !important;
     min-width: 100%;
+    min-height: 30em;
+    justify-content: space-between;
   }
 }

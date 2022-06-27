@@ -3,30 +3,27 @@
 }
 .nav_wrapper {
   background-color: #000;
+  padding-right: 0px;
 }
 .nav_button {
   width: 100%;  
 }
-
+#sm_nav_wrapper {
+  height: inherit;
+  background-color: #000;
+}
 .content_wrapper {
   height: inherit;
   padding: 1em 0px 0px 1.2em;
 }
 
 @media(max-width:768px) {
-  
   #bs_nav{
     justify-content: end !important;
   }
 }
-
-
 @media(min-width:768px) {
   .wrapper {
     min-height: 100vh;
   }
-  .nav_wrapper {
-    padding-right: 0px;
-  }
 }
-
