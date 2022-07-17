@@ -7,9 +7,10 @@ import Lab from '../components/lab/lab'
 import Skills from '../components/skills/skills'
 import Network from '../components/network/network'
 
-import { Row, Col, Button, Navbar, Nav, Collapse } from 'react-bootstrap'
+import { Row, Col, Button, Navbar, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import index from '../styles/index.module.css'
+
 
 export default class Home extends React.Component {
   constructor(props){
@@ -54,8 +55,8 @@ export default class Home extends React.Component {
         </Head>
 
         <Row className={`${index.wrapper} main-wrapper`}>
-          <Col id={index.sm_nav_wrapper} className={index.nav_wrapper} xs={12} md={2}>
-            <Navbar collapseOnSelect expand="md"  id={index.bs_nav}>
+          <Col className={index.nav_wrapper} xs={12} md={2} xxl={1}>
+            <Navbar collapseOnSelect expand="md"  id={index.bs_nav} className="navbar navbar-dark">
               <Navbar.Brand>{this.state.page}</Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
@@ -79,7 +80,7 @@ export default class Home extends React.Component {
               </Navbar.Collapse>
             </Navbar>
           </Col>
-          <Col sm={12} md={10} className={index.content_wrapper}>
+          <Col sm={12} md={10} xxl={11} className={index.content_wrapper}>
             {pageHandler()}
           </Col>
         </Row>
