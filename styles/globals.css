@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 html,
 body {
   height: 100;
@@ -10,17 +11,24 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  text-align: center;
 }
 * {
   box-sizing: border-box;
 }
 
-.navbar-brand {
+h1,h2,h3,h4,h5,h6,p,a {
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
+h1 {
+  font-weight: 200 !important;
+}
+
 .navbar-toggler {
-  border-color: #fff;
+  border-color: #fff !important;
 }
+
 .navbar-nav .btn {
   background-color: #000;
   border-radius: 0px;
@@ -32,18 +40,29 @@ a {
   border-bottom-width: 1px;
   border-color: #fff;
 }
-.navbar-nav .btn:hover {
-  background-color: #000;
-  border-bottom-width: 1px;
+.navbar-nav .btn:active {
+  background-color:#fff;
+  color: #000;
+  transition: ease-in-out;
 }
 
+.navbar-nav .btn:hover, .navbar-nav .btn:focus{
+  background-color: #000;
+  border-bottom-width: 1px;
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.navbar-nav .btn:active:focus{
+  box-shadow: none;
+}
 
 @media(max-width: 768px) {
   .navbar {
-    padding: 8px 20px 8px 20px;
+    padding: 8px 22px 8px 20px;
   }
-  .navbar-nav {
-    padding: 0px 25% 0px 25%;
+  .btn {
+    max-width: 40%;
   }
 }
 

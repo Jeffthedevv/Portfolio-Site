@@ -4,17 +4,17 @@
 .nav_wrapper {
   background-color: #000;
   padding-right: 0px;
+  height: inherit;
+  padding: 2px 0px;
 }
 .nav_button {
   width: 100%;  
 }
-#sm_nav_wrapper {
-  height: inherit;
-  background-color: #000;
-}
+
 .content_wrapper {
   height: inherit;
-  padding: 1em 0px 0px 1.2em;
+  padding: 1em 2em 1em 1.2em;
+  background-color: #27285C;
 }
 
 @media(max-width:768px) {
@@ -25,5 +25,5 @@
 @media(min-width:768px) {
   .wrapper {
     min-height: 100vh;
-  }
+  }  
 }

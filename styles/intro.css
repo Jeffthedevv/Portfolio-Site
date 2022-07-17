@@ -1,0 +1,37 @@
+.intro_wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.intro_wrapper .top_styler_block{
+  position: absolute;
+  left: 0px;
+  height: 4em;
+  width: 8em;
+  border-top: solid;
+  border-left: solid;
+}
+.intro_wrapper .bottom_styler_block {
+  position: absolute;
+  height: 4em;
+  width: 8em;
+  bottom: 0px;
+  right: 0px;
+  border-bottom: solid;
+  border-right: solid;
+}
+.intro_wrapper .styler_border {
+  border-color: #fff;
+  border-width: 4px;
+  background-color: transparent
+}
+
+
+/* @media(min-width:768px) {
+
+}   */
+
+
+
