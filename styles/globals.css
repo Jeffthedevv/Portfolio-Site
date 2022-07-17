@@ -1,18 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
 html,
 body {
-  height: 100;
-  overflow: hidden;
+  height: 100;  
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 a {
   color: inherit;
   text-decoration: none;
+  text-align: center;
 }
-
 * {
   box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 300 !important;
+}
+
+p{
+  font-weight: 300 !important;
+}
+
+.navbar-toggler {
+  border-color: #fff !important;
+}
+
+.navbar-nav .btn {
+  background-color: #000;
+  border-radius: 0px;
+  border-color: #fff;
+  border-width: 0px;
+}
+.navbar-nav .btn.active {
+  background-color: #000;
+  border-bottom-width: 1px;
+  border-color: #fff;
+}
+.navbar-nav .btn:active {
+  background-color:#fff;
+  color: #000;
+  transition: ease-in-out;
+}
+
+.navbar-nav .btn:hover, .navbar-nav .btn:focus{
+  background-color: #000;
+  border-bottom-width: 1px;
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.navbar-nav .btn:active:focus{
+  box-shadow: none;
+}
+
+@media(max-width: 768px) {
+  .navbar {
+    padding: 8px 22px 8px 20px;
+  }
+  .btn {
+    max-width: 40%;
+  }
+}
+
+@media(min-width:768px) {
+  .navbar-brand {
+    display: none;
+  }
+  .navbar-expand-md{
+    height: 100vh;
+    justify-content: space-evenly !important;
+    align-items: stretch;
+  }
+  
+  .navbar-expand-md .navbar-collapse {
+    height: inherit;
+  }
+  .inner-nav {
+    margin-right: 0px !important;
+    flex-direction: column !important;
+    min-width: 100%;
+    min-height: 30em;
+    justify-content: space-between;
+  }
 }
