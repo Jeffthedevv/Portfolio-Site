@@ -5,7 +5,7 @@
   background-color: #000;
   padding-right: 0px;
   height: inherit;
-  padding: 2px 0px;
+  /* padding: 2px 0px; */
 }
 .nav_button {
   width: 100%;  
