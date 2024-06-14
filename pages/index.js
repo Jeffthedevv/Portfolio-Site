@@ -9,7 +9,7 @@ import Network from '../components/network/network'
 
 import { Row, Col, Button, Navbar, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import index from '../styles/index.module.css'
+import index from '../styles/index.module.css';
 
 
 export default class Home extends React.Component {
@@ -54,7 +54,7 @@ export default class Home extends React.Component {
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <Row className={`${index.wrapper} main-wrapper`}>
+        <Row className={`${index.wrapper} main-wrapper m-auto`}>
           <Col className={index.nav_wrapper} xs={12} md={2} xxl={1}>
             <Navbar collapseOnSelect expand="md"  id={index.bs_nav} className="navbar navbar-dark">
               <Navbar.Brand>{this.state.page}</Navbar.Brand>
