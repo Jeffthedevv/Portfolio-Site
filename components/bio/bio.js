@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import bio from '../../styles/bio.module.css';
 
 const classNames = require('classnames');
@@ -9,7 +10,7 @@ export default function Bio() {
       <span className={classNames(bio.styler_border, bio.bottom_styler_block)}></span>
 
       <div className={classNames(bio.content_wrapper)}>
-        <h1>About Me</h1>
+        <h1 className="w-100 mb-4">About Me</h1>
         <div className={""}>
           <p>My journey in technology started young when my father brough home a Compact PC and I became obsessed with trying to figure out how it worked.
             I remember waiting for him to leave to work so I could take apart the computer. From molex cables to 40pin connectors, I was mezmoriezed with how those
@@ -21,6 +22,15 @@ export default function Bio() {
             MongoDB, and MariaDB. My commitment to continuous learning and staying updated with the latest industry trends has all been for the love of what I do. 
           </p>
         </div>
+        <span className={classNames(bio.picture_wrapper)}>
+        <Image 
+          src={'https://szqedxclwixl0drf.public.blob.vercel-storage.com/me-kE3ZdqJNY1eiah7luhPdxGuwgiO12d.jpg'}
+          className={classNames(bio.picture_me)}
+          height={300}
+          width={275}
+          alt="Jeffery Diaz"
+        />
+      </span>
         <div className="quick_links w-100">   
         </div>
       </div>

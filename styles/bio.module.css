@@ -36,3 +36,14 @@
   flex-wrap: wrap;
   align-content: center;
 }
+.content_wrapper .picture_wrapper {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  text-align: right;
+  background-color: transparent;
+}
+
+.picture_me {
+  border-radius: 75px;
+}
