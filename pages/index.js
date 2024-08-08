@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head'
 
+
 import Intro from '../components/intro/intro'
 import Bio from '../components/bio/bio'
 import Lab from '../components/lab/lab'

@@ -2,8 +2,10 @@
 export default function Intro() {
   return (
     <div className="intro_wrapper">
+    
       <span className="top_styler_block styler_border"></span>
       <span className="bottom_styler_block styler_border"></span>
+
       <div className="content_wrapper">
         <h1 className="intro_header w-100">Jeffery Diaz</h1>
         <h3 className="intro_subHeader w-100">Fullstack Developer</h3>
@@ -13,6 +15,7 @@ export default function Intro() {
         <div className="quick_links w-100">   
         </div>
       </div>
+
     </div>
   )
 }
