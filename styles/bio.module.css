@@ -39,11 +39,22 @@
 .content_wrapper .picture_wrapper {
   width: 100%;
   height: fit-content;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-align: right;
   background-color: transparent;
 }
-
 .picture_me {
-  border-radius: 75px;
+  border-radius: 50px;
+  position: relative;
+}
+#leftPic {
+  z-index: 2;
+  position: absolute!important;
+  
+}
+#rightPic {
+  z-index: 1;
+  right:10px;
+  left: 25px !important;
+  transform: rotate(20deg);
 }
