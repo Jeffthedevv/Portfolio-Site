@@ -3,10 +3,7 @@ import Head from 'next/head'
 
 
 import Intro from '../components/intro/intro'
-import Bio from '../components/bio/bio'
-import Lab from '../components/lab/lab'
-import Skills from '../components/skills/skills'
-import Network from '../components/network/network'
+
 
 import { Row, Col, Button, Navbar, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -36,14 +33,6 @@ export default class Home extends React.Component {
       {
         case "Welcome":
           return <Intro />
-        case "Bio":
-          return <Bio/>
-        case "Lab":
-          return <Lab/>
-        case "Skills":
-          return <Skills/>
-        case "Network":
-          return <Network/>
       }
     }
 
@@ -63,19 +52,19 @@ export default class Home extends React.Component {
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="inner-nav">
                   <Nav.Link href='#'>
-                    <Button className={`${index.nav_button} active`} value="Welcome" onClick={this.buttonHandler}>Welcome</Button>  
+                    <Button className={`${index.nav_button} active`} value="Welcome">Welcome</Button>  
                   </Nav.Link>
                   <Nav.Link href='#'>
-                    <Button className={index.nav_button} value="Bio" onClick={this.buttonHandler}>Bio</Button>  
+                    <Button className={index.nav_button} value="Bio">Bio</Button>  
                   </Nav.Link>
                   <Nav.Link href='#'>
-                    <Button className={index.nav_button} value="Skills" onClick={this.buttonHandler}>Skills</Button>  
+                    <Button className={index.nav_button} value="Skills">Skills</Button>  
                   </Nav.Link>
                   <Nav.Link href='#'>
-                    <Button className={index.nav_button} value="Lab" onClick={this.buttonHandler}>Lab</Button>
+                    <Button className={index.nav_button} value="Lab">Lab</Button>
                   </Nav.Link>
                   <Nav.Link href='#'>
-                    <Button className={index.nav_button} value="Network" onClick={this.buttonHandler}>Network</Button>
+                    <Button className={index.nav_button} value="Network">Network</Button>
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
