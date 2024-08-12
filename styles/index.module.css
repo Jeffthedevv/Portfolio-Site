@@ -1,14 +1,17 @@
 .navbar {
   justify-content: end !important;
+  width: 150px;
 }
 .nav_wrapper {
   background-color: #000;
   padding-right: 0px;
   height: inherit;
-  /* padding: 2px 0px; */
 }
 .nav_button {
   width: 100%;  
+}
+.inner_nav {
+  position: fixed;
 }
 
 .content_wrapper {

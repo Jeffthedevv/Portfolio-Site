@@ -46,7 +46,7 @@ export default class Home extends React.Component {
 
         <Row className={`${index.wrapper} main-wrapper m-auto`}>
           <Col className={index.nav_wrapper} xs={12} md={2} xxl={1}>
-            <Navbar collapseOnSelect expand="md"  id={index.bs_nav} className="navbar navbar-dark">
+            <Navbar collapseOnSelect expand="md"  id={index.bs_nav} className="navbar navbar-dark position-fixed">
               <Navbar.Brand>{this.state.page}</Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">

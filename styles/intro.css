@@ -4,19 +4,19 @@
 }
 
 .intro_wrapper .top_styler_block{
-  position: absolute;
-  left: 0px;
+  position: fixed;
+  left: 195px;
   height: 4em;
   width: 8em;
   border-top: solid;
   border-left: solid;
 }
 .intro_wrapper .bottom_styler_block {
-  position: absolute;
+  position: fixed;
   height: 4em;
   width: 8em;
-  bottom: 0px;
-  right: 0px;
+  bottom: 20px;
+  right: 20px;
   border-bottom: solid;
   border-right: solid;
 }
@@ -34,6 +34,11 @@
   flex-wrap: wrap;
   align-content: center;
 }
+
+.intro_wrapper .content_wrapper .welcoming_wrapper {
+  height: 100vh;
+}
+
 .intro_wrapper .content_wrapper .intro_subHeader {
   margin-bottom: 12rem;
   font-size: 1.2rem;
@@ -58,11 +63,20 @@
   width: 40em;
   font-size: 1.2rem;
 }
-.intro_wrapper .content_wrapper .quick_links {
-  position: relative;
-  /* bottom: 5em;  */
+
+.intro_wrapper .content_wrapper .bio_wrapper {
+  height: 100vh;
 }
 
+.intro_wrapper .content_wrapper .skills_wrapper {
+  height: 100vh;
+}
+.intro_wrapper .content_wrapper .lab_wrapper {
+  height: 100vh;
+}
+.intro_wrapper .content_wrapper .contact_wrapper {
+  height: 100vh;
+}
 
 
 /* @media(min-width:768px) {
