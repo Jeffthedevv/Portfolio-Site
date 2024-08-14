@@ -1,8 +1,11 @@
 import Image from "next/image";
+import styles from "../../styles/bio.module.css"
+
+const classNames = require('classnames')
 
 export default function Bio() {
   return (
-    <div className="bio_wrapper" id="bio">
+    <div className={styles.bio_wrapper} id="bio">
 
       <h1 className="w-100 mb-4">About Me</h1>
 
