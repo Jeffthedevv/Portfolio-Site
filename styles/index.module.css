@@ -13,11 +13,11 @@
 
 .content_wrapper {
   height: inherit;
-  padding: 1em 2em 1em 1.2em;
+  /* padding: 1em 2em 1em 1.2em; */
   /* background-color: #27285C; */
-  background-image: url("https://szqedxclwixl0drf.public.blob.vercel-storage.com/abstract-digital-blue-fiber-optic-lines-moving-vimage-r65SSjVT5XS0Xo5DXok8IMMWtZ6z1J.gif");
+  /* background-image: url("https://szqedxclwixl0drf.public.blob.vercel-storage.com/abstract-digital-blue-fiber-optic-lines-moving-vimage-r65SSjVT5XS0Xo5DXok8IMMWtZ6z1J.gif");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 @media(max-width:768px) {
