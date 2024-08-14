@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head'
 
-import Intro from '../components/intro/intro'
+import Content from '../components/content/content'
 import Link from "next/link"
 
 import { Row, Col, Button, Navbar, Nav } from 'react-bootstrap'
@@ -12,13 +12,6 @@ import index from '../styles/index.module.css';
 export default class Home extends React.Component {
 
   render() {
-    const pageHandler = () => {
-      switch(this.state.page)
-      {
-        case "Welcome":
-          return <Intro />
-      }
-    }
 
     return (
       <div>
@@ -55,7 +48,7 @@ export default class Home extends React.Component {
             </Navbar>
           </Col>
           <Col sm={12} md={10} xxl={11} className={index.content_wrapper}>
-            <Intro />
+            <Content />
           </Col>
         </Row>
       </div>   
